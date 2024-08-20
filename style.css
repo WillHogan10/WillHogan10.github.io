@@ -28,11 +28,13 @@ h1 {
 }
 #nav-ul {
     list-style-image: none;
+    border-radius: 20px
     
 }
 .nav-li {
     display: inline-block;
     padding: 0 10px;
+    border-radius: 20px
 }
 a {
     text-decoration: none;
@@ -65,4 +67,24 @@ main {
 }
 h2, h3 {
     margin: 0px;
+}
+#portfolio {
+list-style-type: none;
+padding-left: 0;
+ }
+
+#portfolio li {
+background: #a39393;
+padding: 10px;
+border-radius: 10px;
+margin-bottom: 10px;
+}
+
+#portfolio li:hover {
+background: #25bdd2;
+}
+
+#portfolio a {
+text-decoration: none;
+color: #e3d7d7;
 }
