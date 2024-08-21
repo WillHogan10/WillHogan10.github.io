@@ -1,9 +1,9 @@
 body {
     background: rgb(156, 34, 34);
-    background-image: URL(image/blue.jpeg);
     color: rgb(222, 216, 216);
     padding: 10px;
     font-family: 'Times New Roman', Times, serif;
+    background-image: URL(images/blue.jpeg);
 }
 #all-contents {
   max-width: 800px;
@@ -43,7 +43,7 @@ a {
 
 /* main container area beneath menu */
 main {
-    background: rgb(125, 130, 168);
+    background: rgb(90, 118, 190);
     display: flex;
     border-radius: 20px;
 }
@@ -62,8 +62,9 @@ main {
 
 /* portfolio styles */
 #interests {
-    border: 4px rgb(54, 202, 199) ridge;
+    border: 8px rgb(249, 249, 249) ridge;
     padding: 8px;
+    border-radius: 10px;
 }
 h2, h3 {
     margin: 0px;
@@ -74,7 +75,7 @@ padding-left: 0;
  }
 
 #portfolio li {
-background: #a39393;
+background: #000000;
 padding: 10px;
 border-radius: 10px;
 margin-bottom: 10px;
@@ -86,5 +87,5 @@ background: #25bdd2;
 
 #portfolio a {
 text-decoration: none;
-color: #e3d7d7;
+color: #000000;
 }
