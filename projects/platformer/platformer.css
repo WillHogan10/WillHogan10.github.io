@@ -5,6 +5,8 @@ body {
 canvas {
   background-color: lightblue;
   margin: 20px;
+  background-image: url(images/max-verstappen.jpg);
+  background-size: cover;
 }
 
 img {
