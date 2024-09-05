@@ -53,7 +53,7 @@ createPlatform(415,220,80,20);
     // You must decide on the collectable type, the x position, the y position, the gravity, and the bounce strength
     // Your collectable choices are 'database' 'diamond' 'grace' 'kennedi' 'max' and 'steve'; more can be added if you wish
     // example usage: createCollectable(type, x, y, gravity, bounce)
-createCollectable("trophy",1320,630,1,);
+createCollectable("trophy",1320,610,1,);
 createCollectable("singapore", 740,60);
 createCollectable("dutch",435, 110 )
     
@@ -63,8 +63,8 @@ createCollectable("dutch",435, 110 )
     // Your wall choices are: 'top' 'left' 'right' and 'bottom'
     // example usage: createCannon(side, position, delay, width, height)
 createCannon('left', 650,1);
-createCannon('left', 200,1000, 10,10);
-createCannon('top', 600, 900, 10, 10);
+createCannon('left', 200,650, 10,10);
+createCannon('top', 600, 650, 10, 10);
 
 
 

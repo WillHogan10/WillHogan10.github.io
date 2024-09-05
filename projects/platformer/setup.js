@@ -76,8 +76,8 @@ const cannonHeight = 80;
 let projectiles = [];
 const defaultProjectileWidth = 24;
 const defaultProjectileHeight = defaultProjectileWidth;
-const collectableWidth = 40;
-const collectableHeight = 40;
+const collectableWidth = 60;
+const collectableHeight = 60;
 let collectables = [];
 
 // canvas and context variables; must be initialized later
