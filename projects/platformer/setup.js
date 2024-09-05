@@ -101,3 +101,5 @@ var collectableList = {
   singapore: {image: "images/collectables/f1 singapore trophy.png"},
   dutch: {image: "images/collectables/f1 dutch.png"},
 };
+
+

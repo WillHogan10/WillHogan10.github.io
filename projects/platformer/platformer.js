@@ -64,7 +64,7 @@ createCollectable("dutch",435, 110 )
     // example usage: createCannon(side, position, delay, width, height)
 createCannon('left', 650,1);
 createCannon('left', 200,1000, 10,10);
-createCannon('top', 600, 1200, 10, 10);
+createCannon('top', 600, 900, 10, 10);
 
 
 
