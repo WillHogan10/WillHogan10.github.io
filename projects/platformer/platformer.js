@@ -63,8 +63,8 @@ createCollectable("dutch",435, 110 )
     // Your wall choices are: 'top' 'left' 'right' and 'bottom'
     // example usage: createCannon(side, position, delay, width, height)
 createCannon('left', 650,1);
-createCannon('left', 200,650, 10,10);
-createCannon('top', 600, 650, 10, 10);
+createCannon('left', 200,750, 10,10);
+createCannon('top', 600, 550, 10, 10);
 
 
 

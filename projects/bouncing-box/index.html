@@ -9,19 +9,22 @@
 		.box {
 			width: 70px;
 			height: 70px;
-			background-color: teal;
-			font-size: 300%;
+			font-size: 250%;
 			text-align: center;
+			color: red;
 			user-select: none;
 			display: block;
 			position: absolute;
 			top: 100px;
 			/* Change me! */
 			left: 0px;
+			background-image: url(img/gumball5.png);
 		}
 
 		.board {
 			height: 100vh;
+			background-image: url(img/cod.jpeg);
+			background-size: cover;
 		}
 	</style>
 	<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
@@ -60,22 +63,30 @@
 			function changeBoxText(newText) {
 				box.text(newText);
 			}
-
+			
 			//////////////////////////////////////////////////////////////////
 			/////////////////// YOUR CODE BELOW HERE /////////////////////////
 			//////////////////////////////////////////////////////////////////
 
 			// TODO 2 - Variable declarations 
-
-
-
+			var positionX = 0;
+			var points = 0;
+			var speed = 10;
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
 			it should move the Box to a new location. If the box drifts off the screen
 			turn it around! 
 			*/
-			function update() {
-
+			function  update() { 
+            /* Increase positionX by 10 here */
+				moveBoxTo(positionX);
+				positionX = positionX + speed;
+				if (positionX > boardWidth){
+					speed = -speed;
+				}
+				if (positionX < 0){
+					speed = -speed;
+				}
 
 			};
 
@@ -85,8 +96,15 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-
-
+				
+				changeBoxText(points);
+				positionX = 0
+				points = points + 1; 
+				if (speed > 0) {
+					speed = speed + 3;
+				} else if (speed < 0) {
+					speed = speed - 3;
+				}
 			};
 
 
