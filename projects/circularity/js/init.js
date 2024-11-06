@@ -25,9 +25,18 @@ var init = function (window) {
 
 
         // TODO 2 : Create a function that draws a circle 
-        
+        function drawCircle() {
+            circle = draw.randomCircleInArea(canvas, true, true, "#999", 2);
+            physikz.addRandomVelocity(circle, canvas);
+            view.addChild(circle);
+            circles.push(circle);
+        }
 
-        // TODO 3 / 7 : Call the drawCircle() function 
+        // TODO 3 / 7 : Call the drawCircle() function
+        for (var i = 1; i <= 100; i++){
+            drawCircle(i);
+        }
+
 
 
         ////////////////////////////////////////////////////////////
@@ -41,9 +50,16 @@ var init = function (window) {
         */
         function update() {
             // TODO 4 : Update the circle's position //
+        
+            for (var i = 0; i < circles.length; i++){
+                physikz.updatePosition(circles[i]);
+                game.checkCirclePosition(circles[i]);
+
+            } 
 
             
             // TODO 5 / 10 : Call game.checkCirclePosition() on your circles.
+           // they were deleted because the hard coded values are not needed and we created a loop to repeat all of the previous hard coded data. 
            
 
             // TODO 9 : Iterate over the array
@@ -63,8 +79,23 @@ var init = function (window) {
                 circle.x = 0;
             }
             
-            // TODO 6 : YOUR CODE STARTS HERE //////////////////////
             
+            // TODO 6 : YOUR CODE STARTS HERE //////////////////////
+            if (circle.x < 0){
+                circle.x = canvas.width;
+                // this if statement checks that if the circle goes past the left side it comes back on the right 
+
+            } 
+            if (circle.y > canvas.height){
+                circle.y = 0;
+                // this if statement checks if the circle goes lower than the screen it sets it back to the top.  
+
+            }
+            if (circle.y < 0){
+                circle.y = canvas.height;
+                // this checks that if the circle goes off the top then it sets it back to the bottom. 
+
+            }
 
 
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
