@@ -21,13 +21,16 @@ var init = function (window) {
         
         // TODO 1 : Declare and initialize our variables
         var circle; 
-        var circles = []; 
+        var circles = [];
+        
+        
+        
 
 
         // TODO 2 : Create a function that draws a circle 
         function drawCircle() {
             circle = draw.randomCircleInArea(canvas, true, true, "#999", 2);
-            physikz.addRandomVelocity(circle, canvas);
+            physikz.addRandomVelocity(circle, canvas, 25, 25);
             view.addChild(circle);
             circles.push(circle);
         }
@@ -75,6 +78,7 @@ var init = function (window) {
         game.checkCirclePosition = function(circle) {
 
             // if the circle has gone past the RIGHT side of the screen then place it on the LEFT
+            
             if ( circle.x > canvas.width ) {
                 circle.x = 0;
             }
@@ -96,6 +100,9 @@ var init = function (window) {
                 // this checks that if the circle goes off the top then it sets it back to the bottom. 
 
             }
+
+
+
 
 
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
