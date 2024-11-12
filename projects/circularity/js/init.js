@@ -25,6 +25,9 @@ var init = function (window) {
         
         
         
+        
+        
+        
 
 
         // TODO 2 : Create a function that draws a circle 
@@ -76,26 +79,30 @@ var init = function (window) {
         it to the opposite side of the screen.
         */
         game.checkCirclePosition = function(circle) {
+        var rightEdge = circle.x + circle.radius;
+        var leftEdge = circle.x - circle.radius;
+        var topEdge = circle.y + circle.radius;
+        var bottomEdge = circle.y - circle.radius;
 
             // if the circle has gone past the RIGHT side of the screen then place it on the LEFT
             
-            if ( circle.x > canvas.width ) {
+            if (leftEdge > canvas.width ) {
                 circle.x = 0;
             }
             
             
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
-            if (circle.x < 0){
+            if (rightEdge < 0){
                 circle.x = canvas.width;
                 // this if statement checks that if the circle goes past the left side it comes back on the right 
 
             } 
-            if (circle.y > canvas.height){
+            if (bottomEdge > canvas.height){
                 circle.y = 0;
                 // this if statement checks if the circle goes lower than the screen it sets it back to the top.  
 
             }
-            if (circle.y < 0){
+            if (topEdge < 0){
                 circle.y = canvas.height;
                 // this checks that if the circle goes off the top then it sets it back to the bottom. 
 
