@@ -39,29 +39,51 @@ var runLevels = function (window) {
 
     
     function createEnemy(x, y) {
-    var enemy = game.createGameItem("enemy", 25);
-    var redSquare = draw.rect(50, 50, "red");
-    redSquare.x = -25;
-    redSquare.y = -25;
-    enemy.addChild(redSquare);
-    enemy.x = 400;
-    enemy.y = groundY - 50;
-    game.addGameItem(enemy);
-    enemy.velocityX = - 5;
-    enemy.rotationalVelocity = 500;
-
-    enemy.onPlayerCollision = function () {
-      game.changeIntegrity(-25)
-    }; 
-
-    enemy.onProjectileCollision = function () {
-      game.increaseScore(100);
-      enemy.flyTo(700, 490);
-    };
+      var enemy = game.createGameItem("enemy", 25);
+      var redSquare = draw.rect(50, 50, "red");
+      redSquare.x = -25;
+      redSquare.y = -25;
+      enemy.addChild(redSquare);
+      enemy.x = 400;
+      enemy.y = groundY - 50;
+      game.addGameItem(enemy);
+      enemy.velocityX = - 5;
+      enemy.rotationalVelocity = 500;
+  
+      enemy.onPlayerCollision = function () {
+        game.changeIntegrity(-25)
+      }; 
+  
+      enemy.onProjectileCollision = function () {
+        game.increaseScore(100);
+        enemy.flyTo(700, 490);
+      };
     };
     createEnemy(400, 490);
     createEnemy(800, 490);
-    createEnemy(1200, 490)
+    createEnemy(1200, 490);
+
+    function createReward() {
+      var reward = game.createGameItem("reward", 25);
+      var blueSquare = draw.rect(50, 50, "blue");
+      blueSquare.x = -25;
+      blueSquare.y = -25;
+      reward.addChild(blueSquare);
+      reward.x = 400;
+      reward.y = groundY - 50;
+      game.addGameItem(reward);
+      reward.velocityX = - 5;
+      reward.rotationalVelocity = 500;
+  
+      reward.onPlayerCollision = function () {
+        game.changeIntegrity(-25)
+      }; 
+  
+      reward.onProjectileCollision = function () {
+        game.increaseScore(100);
+        reward.flyTo(700, 490);
+      };
+    };
 
     function startLevel() {
       // TODO 13 goes below here
