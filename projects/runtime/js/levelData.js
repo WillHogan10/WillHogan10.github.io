@@ -18,6 +18,9 @@ var makeLevelData = function (window) {
           { type: "sawblade", x: 400, y: groundY },
           { type: "sawblade", x: 600, y: groundY },
           { type: "sawblade", x: 900, y: groundY },
+          { type: "reward", x: 2000, y: groundY - 60},
+          { type: "enemy", x: 1000, y: groundY - 50},
+          { type: "marker", x: 2500, y: groundY - 60},
         ],
       },
       {
@@ -25,9 +28,25 @@ var makeLevelData = function (window) {
         number: 2,
         speed: -3,
         gameItems: [
-          { type: "sawblade", x: 400, y: groundY },
-          { type: "sawblade", x: 600, y: groundY },
-          { type: "sawblade", x: 900, y: groundY },
+          { type: "sawblade", x: 480, y: groundY },
+          { type: "sawblade", x: 888, y: groundY },
+          { type: "sawblade", x: 670, y: groundY },
+          { type: "reward", x: 500, y: groundY - 60},
+          { type: "enemy", x: 1000, y: groundY - 50},
+          { type: "marker", x: 2500, y: groundY - 60},
+        ],
+      },
+      {
+        name: "The Return", 
+        number: 3,
+        speed: -3, 
+        gameItems: [
+          { type: "sawblade", x: 1000, y: groundY },
+          { type: "sawblade", x: 340, y: groundY },
+          { type: "sawblade", x: 200, y: groundY },
+          { type: "reward", x: 220, y: groundY - 60},
+          { type: "enemy", x: 1222, y: groundY - 50},
+          { type: "marker", x: 2500, y: groundY - 60},
         ],
       },
     ];
