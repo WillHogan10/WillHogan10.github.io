@@ -14,12 +14,54 @@ var runLevels = function (window) {
     var levelData = window.opspark.levelData;
 
     // set this to true or false depending on if you want to see hitzones
-    game.setDebugMode(true);
+    game.setDebugMode(false);
 
     // TODOs 5 through 11 go here
     // BEGIN EDITING YOUR CODE HERE
+    
+
+    function createSawBlade(x, y){
+      var hitZoneSize = 25;
+    var damageFromObstacle = 10;
+    var sawBladeHitZone = game.createObstacle(hitZoneSize, damageFromObstacle);
+    sawBladeHitZone.x = x;
+    sawBladeHitZone.y = y;
+    game.addGameItem(sawBladeHitZone);
+    var obstacleImage = draw.bitmap("img/sawblade.png");
+    sawBladeHitZone.addChild(obstacleImage);
+    obstacleImage.x = -25;
+    obstacleImage.y = -25;
+    }
+    createSawBlade(800, 500);
+    createSawBlade(500, 550);
+    createSawBlade(750, 480);
+
 
     
+    function createEnemy(x, y) {
+    var enemy = game.createGameItem("enemy", 25);
+    var redSquare = draw.rect(50, 50, "red");
+    redSquare.x = -25;
+    redSquare.y = -25;
+    enemy.addChild(redSquare);
+    enemy.x = 400;
+    enemy.y = groundY - 50;
+    game.addGameItem(enemy);
+    enemy.velocityX = - 5;
+    enemy.rotationalVelocity = 500;
+
+    enemy.onPlayerCollision = function () {
+      game.changeIntegrity(-25)
+    }; 
+
+    enemy.onProjectileCollision = function () {
+      game.increaseScore(100);
+      enemy.flyTo(700, 490);
+    };
+    };
+    createEnemy(400, 490);
+    createEnemy(800, 490);
+    createEnemy(1200, 490)
 
     function startLevel() {
       // TODO 13 goes below here

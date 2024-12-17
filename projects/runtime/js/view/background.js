@@ -31,6 +31,7 @@ var background = function (window) {
         // TODO (several):
         var tree;
         var buildings = [];
+        
       
       
         // called at the start of game and whenever the page is resized
@@ -92,7 +93,7 @@ var background = function (window) {
             var groundY = ground.y;
             
             // TODO 3: Part 2 - Move the tree!
-            tree.x = tree.x - 1;
+            tree.x = tree.x - 8;
             if (tree.x < -200) {
                 tree.x = canvasWidth;
             }
@@ -100,7 +101,7 @@ var background = function (window) {
             // TODO 4: Part 2 - Parallax
             for (var i = 0; i < buildings.length; i++) {
                 var eachBuilding = buildings[i];
-                eachBuilding.x -= Math.random() * 4;
+                eachBuilding.x -=  4;
                 if (eachBuilding.x < -200){
                     eachBuilding.x = canvasWidth; 
                 }
