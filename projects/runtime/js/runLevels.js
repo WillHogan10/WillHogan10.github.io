@@ -59,9 +59,9 @@ var runLevels = function (window) {
         enemy.flyTo(700, 490);
       };
     };
-    createEnemy(400, 490);
-    createEnemy(800, 490);
-    createEnemy(1200, 490);
+    createEnemy(600, 500);
+    createEnemy(900, 490);
+    
 
     function createReward(x, y) {
       var reward = game.createGameItem("reward", 25);
@@ -91,26 +91,33 @@ var runLevels = function (window) {
     function createMarker(x, y) {
       var marker = game.createGameItem("marker", 25);
       var greenMarker = draw.rect(50, 50, "green");
-      blueSquare.x = -25;
-      blueSquare.y = -25;
-      reward.addChild(greenMarker);
-      reward.x = x;
-      reward.y = y;
+      greenMarker.x = -25;
+      greenMarker.y = -25;
+      marker.addChild(greenMarker);
+      marker.x = x;
+      marker.y = y;
       game.addGameItem(marker);
+      marker.velocityX = - 5;
+      marker.rotationalVelocity = 500;
 
-      marker.onProjectileCollision = startLevel (game.increaseScore(100));
+      marker.onProjectileCollision = function (){
+        location.reload();
+      };
         
       
       
-      marker.onPlayerCollision = startLevel (game.changeIntegrity(25));
+      marker.onPlayerCollision = function (){
+        location.reload();
+      };
 
 
     };
-    createMarker(500, 490);
+    createMarker(2200, 520);
 
 
     function startLevel() {
       // TODO 13 goes below here
+      
 
 
 
