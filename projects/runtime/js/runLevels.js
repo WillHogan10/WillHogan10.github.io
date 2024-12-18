@@ -112,12 +112,21 @@ var runLevels = function (window) {
 
 
     };
-    createMarker(2200, 520);
+    createMarker(3800, 520);
 
 
     function startLevel() {
       // TODO 13 goes below here
-      
+      var level = levelData[0].gameItems[0];
+var firstX = firstGameItemObject.x;
+var firstY = firstGameItemObject.y;
+var firstType = firstGameItemObject.type;
+createSawBlade(firstX, firstY);
+for (var i = 0; i < firstGameItemObject.length; i++) {
+  var eachElement = firstGameItemObject[i];
+
+  // code to do something with each element
+}
 
 
 
