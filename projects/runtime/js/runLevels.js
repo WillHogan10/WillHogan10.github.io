@@ -32,9 +32,9 @@ var runLevels = function (window) {
     obstacleImage.x = -25;
     obstacleImage.y = -25;
     }
-    createSawBlade(800, 500);
-    createSawBlade(500, 550);
-    createSawBlade(750, 480);
+    createSawBlade(600, groundY - 10);
+    createSawBlade(1000, groundY - 120);
+    createSawBlade(450, groundY - 140);
 
 
     
@@ -59,8 +59,8 @@ var runLevels = function (window) {
         enemy.flyTo(700, 490);
       };
     };
-    createEnemy(600, 500);
-    createEnemy(900, 490);
+    createEnemy(600, groundY - 100);
+    createEnemy(1100, groundY );
     
 
     function createReward(x, y) {
@@ -84,9 +84,9 @@ var runLevels = function (window) {
         reward.fadeOut();
       };
     };
-    createReward(500, 490);
-    createReward(800, 490);
-    createReward(1200, 490);
+    createReward(800, groundY );
+    createReward(1000, groundY - 100);
+    createReward(1500, groundY - 120);
 
     function createMarker(x, y) {
       var marker = game.createGameItem("marker", 25);
@@ -112,7 +112,7 @@ var runLevels = function (window) {
 
 
     };
-    createMarker(3800, 520);
+    createMarker(3800, groundY - 50);
 
 
     function startLevel() {

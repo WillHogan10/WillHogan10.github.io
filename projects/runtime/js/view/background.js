@@ -59,7 +59,7 @@ var background = function (window) {
             }
             var bunky = draw.bitmap("img/bunky3remove.png");
             bunky.x = 980;
-            bunky.y = 220;
+            bunky.y = groundY - 350;
             bunky.scaleX = 1.2;
             bunky.scaleY = 0.75;
             background.addChild(bunky);
